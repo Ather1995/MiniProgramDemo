@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="searchContainer">
+    <view class='searchInputArea'>
+      <input class="searchInput" placeholder="请输入缩写或者全称！" focus="false" bindinput="bindinput"  />
+    </view>
+    <view class='searchButton' bindtap='bindViewTap'>搜索</view>
+  </view>
+  <view class="word_detail" wx:for="{{showData}}" wx:key="{{index}}">
+    <text class="wordDetail_abbr">{{item.fullName}}</text>
+    <text class="wordDetail_fullName">{{item.abbr}}</text>
+  </view>
+</view>
